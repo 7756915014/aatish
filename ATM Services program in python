@@ -1,0 +1,45 @@
+
+print("please enter your card")
+
+passwoed = 1234
+pin =int(input("enter your atm pin"))
+balance = 100
+
+if pin == passwoed:
+    while True:
+            print("""
+                    1 == balance
+                    2 == withdraw balance
+                    3 == deposit balance
+                    4 ==  exist
+                """)
+            try:
+                option = int(input("please enter your choise "))
+            except:
+                print("plese enter your valid option ")
+            if  option == 1:
+                    print(balance)
+                    print("your current balance is ", balance)
+            if  option == 2:
+                withdraw_amount = int(input("please enter your withdwar amount"))
+                balance = withdraw_amount - balance
+                print(f"is debited from your account: {withdraw_amount}")
+                print(f"your updated balance iS: {balance}")
+            
+
+            if  option == 3:
+                deposite_balane = int(input("deopsite"))
+                balance = deposite_balane + balance
+                print(f"deposite in your account:  {deposite_balane}")
+                print(f"your updated balance is:  {balance}")
+            if  option == 4:
+                break
+                
+else:
+        print("wrong pin cord please try again")
+        
+    
+
+
+
+
