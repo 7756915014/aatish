@@ -1,0 +1,9 @@
+def diogonal(arr):
+    a = sum([arr[i][i] for i in range(n)])
+    b = sum([arr[i][n-1-i] for i in range(n)])
+    return abs(b-a)
+n = int(input("enter the valau: "))
+arr = []
+for _ in range(n):
+    arr.append(list(map(int, input().split())))
+print(diogonal(arr))
